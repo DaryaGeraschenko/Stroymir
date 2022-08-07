@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+
+{% block title %}{{tovarn.name}}{% endblock %}
+
+{% block content %}
+<div class="tovarn-info">
+    <h5>Фото: {{ tovarn.photo }}</h5>
+    <h3>{{ tovarn.name }}</h3>
+    <h5>Код: {{ tovarn.kod }}</h5>
+    <h5>Цена: {{ tovarn.price }}</h5>
+    <h6>Рейтинг: {{ reviews_average_rating }}</h6>
+</div>
+<hr/>
+<form action= "." method = "post">
+    {% csrf_token %}
+    {{ form }}
+    <input type="submit" value = "Отправить">
+</form>
+{% for review in reviews %}
+<div class="review-card card" style="width: 30rem;">
+    <ul class = "list-group list-group-flush">
+        <li class = "list-group-item"> Рейтинг: {{ review.rating }}/5</li>
+        <li class = "list-group-item">{{  review.text }}</li>
+    </ul>
+</div>
+
+{% endfor %}
+<style>
+.tovarn-info {
+    margin: 10рх 50px;
+}
+h3 {
+    color: blue;
+}
+body {
+    background-image: url(https://bestokna.tomsk.ru/wp-content/uploads/custom-background-1920x1080.jpg);
+    margin: 5px 5px;
+}
+p {
+    border: 3px dashed crimson;
+    text-align center;
+    margin: 10px 10px;
+}
+</style>
+{% endblock %}

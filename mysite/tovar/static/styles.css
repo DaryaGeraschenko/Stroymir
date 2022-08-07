@@ -1,0 +1,34 @@
+.tovarn-info {
+    margin: 10рх 50px;
+
+}
+h2 {
+    color: blue;
+}
+body {
+    background-image: url(https://w0.peakpx.com/wallpaper/167/334/HD-wallpaper-wavy-light-color-line-2015-design.jpg);
+}
+
+.review-card {
+    background-color: white;
+    display: block;
+    text-align: center;
+    margin: 10px;
+
+}
+.review-card li {
+    background-color:
+Orange;
+    margin: 10px;
+}
+.container-fluid{
+   background-color:
+Orange;
+}
+.review-form {
+    margin-left: 10px;
+}
+.review-form input {
+    display: block;
+    margin-button: 10px;
+}
